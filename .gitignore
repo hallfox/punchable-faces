@@ -63,3 +63,6 @@ target/
 
 .DS_Store
 venv/
+*.swp
+node_modules/
+static/compiled.js

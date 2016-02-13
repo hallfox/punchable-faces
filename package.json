@@ -1,0 +1,26 @@
+{
+	"name": "punchable-faces",
+	"version": "0.1.0",
+	"main": "static/main.jsx",
+	"private": "true",
+	"author": "jpalazz2 foxhall",
+	"license": "MIT",
+	"scripts": {
+		"watch": "watchify -v -d -t babelify static/main.jsx -o static/compiled.js",
+		"build": "NODE_ENV=production browserify -t babelify static/main.jsx | uglifyjs > static/compiled.js"
+	},
+	"dependencies": {
+		"babel": "^6.3.26",
+		"react": ">=0.14.7",
+		"react-dom": ">=0.14.7",
+		"gulp": ">=3.9.1"
+	},
+	"devDependencies": {
+		"browserify": ">=13.0.0",
+		"babelify": ">=7.2.0",
+		"uglify-js": ">=2.6.1",
+		"watchify": ">=3.7.0",
+		"babel-preset-react": ">=6.3.13",
+		"babel-preset-es2015": ">=6.3.13"
+	}
+}
