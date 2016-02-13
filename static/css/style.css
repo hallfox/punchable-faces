@@ -1,0 +1,13 @@
+#webcam-area {
+	width: 100%;
+	height: 480px;
+	margin-bottom: 15px;
+}
+
+.centering {
+	text-align: center;
+}
+
+.is-it-button {
+	width: 100%;
+}
