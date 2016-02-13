@@ -6,13 +6,14 @@
 	"author": "jpalazz2 foxhall",
 	"license": "MIT",
 	"scripts": {
-		"watch": "watchify -v -d -t babelify static/main.jsx -o compiled.js",
-		"build": "NODE_ENV=production browserify -t babelify static/main.jsx | uglifyjs > compiled.js"
+		"watch": "watchify -v -d -t babelify static/main.jsx -o static/compiled.js",
+		"build": "NODE_ENV=production browserify -t babelify static/main.jsx | uglifyjs > static/compiled.js"
 	},
 	"dependencies": {
 		"babel": "^6.3.26",
 		"react": ">=0.14.7",
-		"react-dom": ">=0.14.7"
+		"react-dom": ">=0.14.7",
+		"gulp": ">=3.9.1"
 	},
 	"devDependencies": {
 		"browserify": ">=13.0.0",
