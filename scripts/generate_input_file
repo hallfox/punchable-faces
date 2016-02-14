@@ -14,4 +14,5 @@ if [ -d "$1" ]; then
 	ls "$1" | while read x; do echo $1/$x >> output.txt; done
 else
 	echo "Error: $1/ dir not found";
+	exit 1;
 fi
