@@ -1,6 +1,5 @@
 import React from 'react';
 import Webcam from './Webcam.jsx';
-import Button from './Button.jsx';
 
 class PunchableFaces extends React.Component {
 
@@ -17,7 +16,6 @@ class PunchableFaces extends React.Component {
 					</div>
 				</div>
 				<Webcam />
-				<Button clickCallback={this.checkPunchability.bind(this)} />
 			</div>
 		);
 	}
