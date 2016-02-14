@@ -11,7 +11,7 @@ if [ -d "$1" ]; then
 	if [ -f "$2" ]; then
 		rm "$2";
 	fi
-	ls "$1" | while read x; do echo $1/$x >> output.txt; done
+	ls "$1" | while read x; do echo $1/$x >> $2; done
 else
 	echo "Error: $1/ dir not found";
 	exit 1;
