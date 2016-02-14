@@ -1,8 +1,16 @@
 #webcam-area {
 	width: 100%;
 	height: 480px;
-	margin-bottom: 15px;
-	margin-top: 145px;
+	margin-bottom: 25px;
+	margin-top: 30px;
+}
+
+#photo-canvas {
+	width: 640px;
+	margin 145px auto 15px;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
 }
 
 body {
@@ -20,10 +28,18 @@ body {
 
 .is-it-button {
 	width: 100%;
+	margin-bottom: 40px;
 }
 
-.snow {
-	position: absolute;
-	width: 100%;
-	height: 100%;
+.canvas-container {
+	width: 640px;
+	margin: 15px auto 15px;
+	background-color: white;
+}
+.faded {
+	opacity: 0;
+}
+
+h1 {
+	margin-top: 190px;
 }

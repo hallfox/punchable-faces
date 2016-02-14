@@ -7,10 +7,6 @@ class PunchableFaces extends React.Component {
 		console.log("Checking punchability");
 	}
 
-	captureImage(image) {
-
-	}
-
 	render() {
 		return (
 			<div className="container">
