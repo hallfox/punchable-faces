@@ -20,7 +20,7 @@ class Webcam extends React.Component {
 	}
 
 	fadeOut(canvas) {
-		var audio = new Audio("/audio/Camera_Click.mp3");
+		var audio = new Audio("http://localhost:5000/static/Camera_Click.mp3");
 		audio.play();
 		canvas.addEventListener("transitionend", this.fadeIn.bind(this, canvas));
 		canvas.classList.toggle("faded");
