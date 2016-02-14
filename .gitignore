@@ -67,3 +67,5 @@ venv/
 node_modules/
 static/compiled.js
 imgur_secrets.txt
+scripts/neutralfaces
+scripts/punchable
