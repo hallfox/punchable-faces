@@ -2,10 +2,20 @@
 	width: 100%;
 	height: 480px;
 	margin-bottom: 15px;
+	margin-top: 145px;
+}
+
+body {
+	background-image: url('http://encounterchurchnc.com/wp-content/uploads/2014/02/stage.gif');
+	background-size: cover;
 }
 
 .centering {
 	text-align: center;
+}
+
+.centering h1 {
+	color: white;
 }
 
 .is-it-button {
