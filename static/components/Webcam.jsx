@@ -35,6 +35,7 @@ class Webcam extends React.Component {
 			},
 			error: (xhr, status, error) => {
 				console.error("shit broke");
+        console.error(error.toString());
 			}
 		});
 	}

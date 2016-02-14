@@ -11,9 +11,8 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 faces = face_cascade.detectMultiScale(
         gray,
-        scaleFactor=1.6,
-        minNeighbors=5,
-        minSize=(30, 30),
+        scaleFactor=1.01,
+        minSize=(50, 50),
         )
 
 for x, y, w, h in faces:
