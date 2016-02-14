@@ -44,9 +44,9 @@ class Webcam extends React.Component {
 		canvas.height = 480;
 		context.drawImage(video, 0, 0, 640, 480);
 		var data = canvas.toDataURL('image/png');
-		/*
 		$.ajax({
 			url: 'http://localhost:5000/punch',
+      method: 'POST',
 			dataType: 'json',
 			data: {image: data},
 			cache: false,
@@ -62,7 +62,6 @@ class Webcam extends React.Component {
 				this.setState({animating: false});
 			}
 		});
-		*/
 	 	this.setState({animating: true});
 	 	setTimeout(this.fadeOut.bind(this, canvas), 1);
 	}
