@@ -6,7 +6,8 @@ class Webcam extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			isPunchable: null,
+			shouldFadeIn: true,
+			punchability: null,
 			animating: false
 		};
 	}
@@ -24,13 +25,15 @@ class Webcam extends React.Component {
 		audio.play();
 		canvas.addEventListener("transitionend", this.fadeIn.bind(this, canvas));
 		canvas.classList.toggle("faded");
+		this.setState({shouldFadeIn: true});
 	}
 
 	fadeIn(canvas) {
-		if (!this.state.animating) {
+		if (!this.state.shouldFadeIn) {
 			return;
 		}
 		canvas.classList.toggle("faded");
+		this.setState({shouldFadeIn: false});
 		this.setState({animating: false});
 	}
 
@@ -52,14 +55,13 @@ class Webcam extends React.Component {
 			cache: false,
 			success: (response) => {
 				console.log(response);
-				this.setState({
-					isPunchable: response.Punchability,
-					animating: false
-				});
+				alert(response.punchability);
+				this.setState({punchability: response.punchability});
 			},
 			error: (xhr, status, error) => {
 				console.log("Punchability fetch failed!");
 				this.setState({animating: false});
+				this.setState({punchability: null});
 			}
 		});
 	 	this.setState({animating: true});
@@ -99,6 +101,11 @@ class Webcam extends React.Component {
 					</div>
 				</div>
 				<Button clickCallback={this.captureImage.bind(this)} />
+				<div className="row punchability">
+					<div className="col-md-12 centering">
+						{this.state.punchability}
+					</div>
+				</div>
 			</div>
 		);
 	}
