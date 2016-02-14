@@ -13,8 +13,9 @@ def index():
 @app.route("/punch", methods=["POST"])
 def punch():
     if request.method == "POST":
-        img_64 = request.args["image"]
+        img_64 = request.form["image"]
         image_raw = base64.b64decode(img_64)
+        return image_raw
         image = cv2.imread(image_raw)
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         faces = face_cascade.detectMultiScale(
@@ -26,9 +27,9 @@ def punch():
         for x, y, w, h in faces:
             cv2.rectangle(image, (x, y), (x+w, y+h), (255, 0, 255), 2)
         if len(faces) == 0:
-            return False
+            return "Your face is quite fine."
         else:
-            return True
+            return "You should be punched. Right. Now."
 
 
 if __name__ == "__main__":

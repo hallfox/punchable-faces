@@ -25,7 +25,8 @@ class Webcam extends React.Component {
 		context.drawImage(video, 0, 0, 640, 480);
 		var data = canvas.toDataURL('image/png');
 		$.ajax({
-			url: 'http://localhost:5000/punch/',
+			url: 'http://localhost:5000/punch',
+      method: 'POST',
 			dataType: 'json',
 			data: {image: data},
 			cache: false,
