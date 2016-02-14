@@ -8,9 +8,9 @@
 #photo-canvas {
 	width: 640px;
 	margin 145px auto 15px;
-	transition: opacity .25s ease-in-out;
-	-moz-transition: opacity .25s ease-in-out;
-	-webkit-transition: opacity .25s ease-in-out;
+	transition: opacity .4s ease-in-out;
+	-moz-transition: opacity .4s ease-in-out;
+	-webkit-transition: opacity .4s ease-in-out;
 }
 
 body {

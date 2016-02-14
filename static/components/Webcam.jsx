@@ -31,7 +31,6 @@ class Webcam extends React.Component {
 			return;
 		}
 		canvas.classList.toggle("faded");
-		this.setState({animating: false});
 	}
 
 	captureImage(event) {
@@ -53,9 +52,10 @@ class Webcam extends React.Component {
 			success: (response) => {
 				console.log(response);
 				this.setState({
-					isPunchable: response.Punchability,
+					isPunchable: response.punchability,
 					animating: false
 				});
+				alert(response.punchability);
 			},
 			error: (xhr, status, error) => {
 				console.log("Punchability fetch failed!");
