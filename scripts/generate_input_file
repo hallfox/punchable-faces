@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+if [ "$#" -ne 2 ]; then
+	echo "Usage: ./generage_input_file <img-dir> <output-file-name>";
+	exit 1;
+fi
+
+if [ -d "$1" ]; then
+	if [ -f "$2" ]; then
+		rm "$2";
+	fi
+	ls "$1" | while read x; do echo $1/$x >> output.txt; done
+else
+	echo "Error: $1/ dir not found";
+fi
