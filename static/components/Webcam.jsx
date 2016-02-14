@@ -55,7 +55,6 @@ class Webcam extends React.Component {
 			cache: false,
 			success: (response) => {
 				console.log(response);
-				alert(response.punchability);
 				this.setState({punchability: response.punchability});
 			},
 			error: (xhr, status, error) => {
